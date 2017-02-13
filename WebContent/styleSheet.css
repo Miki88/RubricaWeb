@@ -1,0 +1,41 @@
+@CHARSET "ISO-8859-1";
+
+html, body {
+	height: 100%;
+}
+
+.row {
+	max-width: 950px;
+	margin: auto !important;
+}
+
+.container {
+	text-align: center;
+}
+
+.bottoniHome{
+	max-width: 240px; 
+	margin: auto
+}
+
+.bottoniEditing{
+	max-width: 90px; 
+	margin: auto
+}
+
+thead { display: block;
+		background: linear-gradient(#fff, #ddd); }
+tbody { display: block; }
+
+tbody {
+    height: 220px;     
+    overflow-y: auto;   
+    overflow-x: hidden;  
+}
+td{
+    width:120px;
+    vertical-align: middle !important;
+    }
+th{
+    width:115px;
+    }
