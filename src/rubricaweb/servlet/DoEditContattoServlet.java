@@ -47,14 +47,16 @@ public class DoEditContattoServlet extends HttpServlet {
        }
        
        Persona pers = new Persona(id, nome, cognome, indirizzo, telefono, eta);
- 
-
-       try {
-           DBUtils.modificaPersona(conn, pers);
-       } catch (SQLException e) {
-           e.printStackTrace();
-           errorString = e.getMessage();
+       
+       if (errorString == null) {
+           try {
+               DBUtils.modificaPersona(conn, pers);
+           } catch (SQLException e) {
+               e.printStackTrace();
+               errorString = e.getMessage();
+           }
        }
+
  
        // Store infomation to request attribute, before forward to views.
        request.setAttribute("errorString", errorString);

@@ -48,7 +48,6 @@ public class DoCreateContattoServlet extends HttpServlet {
        
        Persona p = new Persona(nome, cognome, indirizzo, telefono, eta);
 
-
        if (errorString == null) {
            try {
                DBUtils.inserisciPersona(conn, p);
